@@ -1,8 +1,8 @@
-### Notas sobre o curso de Node
+# Notas sobre o curso de Node
 
 ## CSS Architecture
 
-# BEM 
+### BEM 
 B = Block: independent, reusable part of our design (like the large hero section our features in features section or testmonials in testmonials section)
 E = Element: belongs to a block, cannot be used outside that block (like a title/subtitle)
 M = Modifier: class that can be used on block or element. Indicate change on default state
@@ -24,7 +24,7 @@ Why extra classes with presentational names is not making HTML less semantic?
 - THe primary purpose of a class name is to be a hook for CSS and Javascript
 - Class names should communicate useful information to developers
 
-# Traditional Nesting
+### Traditional Nesting
 
 Conceptual Organization
 On the 'large hero' example, the large hero is the block and examples of elements would be title and subtitle.
@@ -106,7 +106,7 @@ But in compiling, this would lead to descendent selectors:
 ...
 ```
 
-# PostCSS Nesting Feature
+### PostCSS Nesting Feature
 
 Instead, we can use PostCSS nesting feature as follow:
 ```sh
