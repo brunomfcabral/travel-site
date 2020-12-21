@@ -2,7 +2,60 @@
 
 ## Mobile First
 
-TBD
+Factors:
+- Revolution in way people use internet: more traffic from mobile devices than from laptops/desktops
+- Traditional "Desktop first" responsive design resulted in bloated, slow-loading websites (i.e huge image files)
+
+### Design x Development Context
+
+From a design perspective it means:
+- Designing around a smaller screen first 
+- Small screen size forces us to prioritize our content
+- There's need to anticipate most common user actions
+
+From a development perspective it means:
+- Coding the website so devices don't download unnecessary data
+- Treating the most essential view of the website as our baseline and code upwards from there
+- Making the site load quickly for everyone
+
+### Where do we begin?
+
+#### CSS in a mobile-first way
+Adjust font and image sizes to smartphone screen sizes
+
+Using media queries:
+```sh
+&__title {
+    ...
+    font-size: 1.1rem;
+
+    @media (min-width: 530px){
+        font-size: 4.8rem;
+    }
+}
+```
+But @media is reusable. So we don't want to put it inside our CSS file directly.We can use PostCSS Mixins:
+```sh
+@define-mixin atSmall {
+    @media (min-width: 530px) {
+        @mixin-content;
+    }
+}
+```
+
+And at the CSS file:
+```sh
+&__title {
+    ...
+    font-size: 1.1rem;
+
+    @mixin atSmall {
+        font-size: 4.8rem;
+    };
+}        
+
+```
+
 
 ## Webpack
 
@@ -64,7 +117,6 @@ E = Element: belongs to a block, cannot be used outside that block (like a title
 
 M = Modifier: class that can be used on block or element. Indicate change on default state
 ```sh
-<div class="[block-name]__[element-name]">
 <div class="[block-name] [block-name]--[modifier-rule-name]">
 ```
 
