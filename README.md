@@ -1,7 +1,15 @@
 # Notas sobre o curso de Node
 
+## Mobile First
+
+TBD
+
 ## Webpack
 
+Webpack (https://webpack.js.org/) is a Node.JS module bundler for packages our website depends on (such as styles -- CSS, assets, scripts) in a way that is easy for visitors to consume.
+It lets you do all sorts of automations, such as automatic HTML reload, on the fly changes to CSS and JS
+
+![Webpack Overview](./webpack.png)
 
 ### Automatic browser refreshing 
 
