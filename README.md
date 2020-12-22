@@ -2,7 +2,9 @@
 
 ## Mobile First
 
-Factors:
+![Mobile First](./mobile-first.png)
+
+Why mobile first?
 - Revolution in way people use internet: more traffic from mobile devices than from laptops/desktops
 - Traditional "Desktop first" responsive design resulted in bloated, slow-loading websites (i.e huge image files)
 
@@ -56,6 +58,16 @@ And at the CSS file:
 
 ```
 
+#### Responsive Images
+Traditional Images:
+- Aspect ratio may not be good for smaller screens. Squares are more ideal for small screens
+- Large desktop images may require way more data than what would be enough for small smartphone screens
+
+We need to send different image files to different screen sizes. Aspects to consider:
+- Art direciton and croping situation
+- Image Resolution and File Size situation
+
+Note: by default, browsers treat images as inline elements (similar to texts)
 
 ## Webpack
 
