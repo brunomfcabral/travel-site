@@ -9,6 +9,8 @@ Master (usually) is the primary/main/live/production version of our project
 We should code new features on separate branches
 - What about merging hell?
 
+Pull Request - Request to merge a branch into another
+
 ## Mobile First
 
 ![Mobile First](./mobile-first.png)
